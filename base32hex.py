@@ -117,7 +117,7 @@ def decode(src, str_map):
         result.extend(dst)
         src = src[8:]
 
-    return result
+    return ''.join(map(chr, result))
 
 
 def b32encode(src):
@@ -125,6 +125,7 @@ def b32encode(src):
         return encode(map(ord, src), encodeHex)
     else:
         return encode(src, encodeHex)
+
 
 def b32decode(src):
     return decode(src, encodeHex)
