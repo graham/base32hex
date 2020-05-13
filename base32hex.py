@@ -122,7 +122,7 @@ def decode(src, str_map):
 
 def b32encode(src):
     if type(src) == str:
-        return encode(map(ord, src), encodeHex)
+        return encode(list(map(ord, src)), encodeHex)
     else:
         return encode(src, encodeHex)
 
